@@ -2,15 +2,15 @@ import React from "react";
 import "./App.css";
 import SampleDesign from "./components/SampleDesign";
 import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className=" bg-amber-50">
+    <div className=" bg-amber-50 flex flex-col min-h-screen">
       <Header />
-      {/* <SampleDesign /> */}
-      {[...Array(100)].map((_,i) => (
-        <div key={i}>{i + 1}</div>
-      ))}
+      <Content />
+      <div className="bottom-0"><Footer /></div>
     </div>
   );
 }
