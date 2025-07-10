@@ -9,7 +9,9 @@ function App() {
   return (
     <div className=" bg-amber-50 flex flex-col min-h-screen">
       <Header />
-      <Content />
+      <Content name="Arandelle"
+      description="I am a junior front-end and back-end developer"
+      />
       <div className="bottom-0"><Footer /></div>
     </div>
   );
