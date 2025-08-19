@@ -1,9 +1,12 @@
 import React from "react";
+import Profile from "../assets/profile-nobg.png";
 
 const Header = () => {
   return (
     <header className="sticky top-0 p-4 z-50 bg-amber-50 flex flex-row justify-between">
-      <p className="font-semibold">MY_LOGO</p>
+      <div>
+        <img src={Profile} alt="My Logo" className="h-10 w-10 rounded-full" />
+      </div>
       <button className="cursor-pointer">
         <svg
           className="w-5 h-5"
