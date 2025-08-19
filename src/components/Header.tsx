@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Profile from "../assets/profile-nobg.png";
 
 const Header = () => {
+  const [isViewImage, setIsViewImage] = useState(false);
+  const handleViewImage = () =>{
+    setIsViewImage(!isViewImage);
+  }
+
   return (
     <header className="sticky top-0 p-4 z-50 bg-amber-50 flex flex-row justify-between">
-      <div>
+      {isViewImage && (
+         <div className="inset-0 h-screen w-screen fixed bg-black/50 flex items-center justify-center"
+         onClick={handleViewImage}
+         > 
+          <div className="bg-white w-[90%] sm:w-auto rounded-lg">
+            <img src={Profile} alt="profile-img"/>
+          </div>
+        </div>
+      )}
+
+      <button className="cursor-pointer" onClick={handleViewImage}>
         <img src={Profile} alt="My Logo" className="h-10 w-10 rounded-full" />
-      </div>
+      </button>
       <button className="cursor-pointer">
         <svg
           className="w-5 h-5"
