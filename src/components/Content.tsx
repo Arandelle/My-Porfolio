@@ -19,7 +19,7 @@ const Content: React.FC<ContentProps> = ({name, description}) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-in-left">
-              Alex <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Johnson</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">{name}</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slide-in-left" style={{animationDelay: '0.2s'}}>
@@ -27,7 +27,7 @@ const Content: React.FC<ContentProps> = ({name, description}) => {
             </p>
             
             <p className="text-lg text-gray-400 mb-10 max-w-lg mx-auto lg:mx-0 animate-slide-in-left" style={{animationDelay: '0.4s'}}>
-              I craft beautiful, functional web experiences that solve real-world problems and delight users.
+            {description}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-in-left" style={{animationDelay: '0.6s'}}>
